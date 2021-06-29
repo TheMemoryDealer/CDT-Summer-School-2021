@@ -27,4 +27,17 @@ expected output:
 1.7.1 True
 4.5.1
 ```
-* Running `python webcam.py` with dummy image **./input.jpg** will give give somethign like:
+* Running `python webcam.py` with dummy image **./input.jpg** will give give something like:
+<p align="middle">
+  <img src="input.jpg" width="400" />
+  <img src="output.jpg" width="400" /> 
+</p>
+just dont forget to hit 0 to close image or you might crash the terminal sesh.
+
+* Follow this for more help https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5#scrollTo=9_FzH13EjseR
+
+* Inference on webcam content
+```
+python detectron2/demo/demo.py --config-file detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml --webcam --confidence-threshold 0.5 --opts MODEL.WEIGHTS detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl
+```
+output runs at around 7FPS on RTX 2080.
