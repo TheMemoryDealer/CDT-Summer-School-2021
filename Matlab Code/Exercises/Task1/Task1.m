@@ -5,7 +5,7 @@ clc;
 %This makes sure that the computer USB port speaks the same convention as
 %the port on the Arduino
 serialportlist
-s = serialport("COM4",115200);
+s = serialport("/dev/ttyACM0",115200);
 s.Terminator;
 configureTerminator(s,"LF");
 

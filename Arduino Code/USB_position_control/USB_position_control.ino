@@ -36,7 +36,7 @@ void loop() {
 
 void move(int milis) {
   Servo1.writeMicroseconds(milis); 
-  //Serial.println("Moving to lilis: ");
-  //Serial.println(milis);
-  //delay(3000); 
+  Serial.println("Moving to lilis: ");
+  Serial.println(milis);
+  delay(3000); 
 }

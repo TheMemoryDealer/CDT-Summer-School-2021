@@ -5,4 +5,4 @@ clc;
 
 %Camera preparation
 cameras = webcamlist
-cam = webcam
+cam = webcam(2)
