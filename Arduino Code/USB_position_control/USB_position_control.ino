@@ -17,26 +17,26 @@ void loop() {
 
 
 
- int input() {
+int input() {
   String inString = "";
-  while(Serial.available() == 0) { }
+  while (Serial.available() == 0) { }
   delay(100);
   while (Serial.available() > 0) {
-    delay(100);  
+    delay(100);
     int inChar = Serial.read();
     //Serial.println("Read Char: " + String(inChar));
     inString += (char)inChar;
   }
   int output = inString.toInt();
-  //Serial.println("The output is:" + String(output));  
-  Serial.println(output); 
+  //Serial.println("The output is:" + String(output));
+  Serial.println(output);
   return output;
 }
 
 
 void move(int milis) {
-  Servo1.writeMicroseconds(milis); 
+  Servo1.writeMicroseconds(milis);
   Serial.println("Moving to lilis: ");
   Serial.println(milis);
-  delay(3000); 
+  delay(3000);
 }
