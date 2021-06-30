@@ -44,3 +44,8 @@ output runs at around 7FPS on RTX 2080.
 <p align="center">
   <img src="https://github.com/TheMemoryDealer/CDT-Summer-School-2021/blob/main/Figures/Peek%202021-06-30%2000-23.gif" width="800" alt="animated" />
 </p>
+
+* Quick hack to only show Apple class (pretrained system sees apple with ~97% confidence, increase the threshold to this to exclude classes with lower confidence)
+```
+python detectron2/demo/demo.py --config-file detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml --webcam --confidence-threshold 0.97 --opts MODEL.WEIGHTS detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl
+```
